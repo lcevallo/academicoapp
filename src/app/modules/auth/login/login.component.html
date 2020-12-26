@@ -1,0 +1,84 @@
+<div id="container_lc" [ngClass]="signIn" >
+  <!-- FORM SECTION -->
+  <div class="row_lc">
+    <div class="col_lc">
+
+
+    </div>
+    <!-- SING IN -->
+    <div class="col_lc align-items-center flex-col sign-in" >
+      <div class="form-wrapper align-items-center">
+        <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
+        <div class="form sign-in">
+          <div class="input-group_lc">
+            <i class='bx bxs-user'></i>
+            <input type="text" name="usuario" placeholder="Usuario" ngModel #usuarioInput="ngModel"  required>
+            <span class="help-block" style="color: red;" *ngIf=" usuarioInput.invalid &&  usuarioInput.touched">Ingrese su usuario</span>
+          </div>
+          <div class="input-group_lc">
+            <i class='bx bxs-lock-alt' ></i>
+            <input type="password" name="password" placeholder="Clave" ngModel #passwordInput="ngModel"  required >
+            <span class="help-block" style="color: red;" *ngIf=" passwordInput.invalid &&  passwordInput.touched">Digite su clave</span>
+          </div>
+          <button type="submit" name="button" [disabled]="loginForm.invalid">
+            Ingresar
+          </button>
+          <p><b>
+            Olvido su contraseña?
+          </b></p>
+          <p><span>
+            No tiene una cuenta?
+          </span>
+            <b class="pointer"> Registrese aqui</b>
+          </p>
+        </div>
+      </form>
+      </div>
+      <div class="form-wrapper">
+        <div class="social-list-lc align-items-center sign-in">
+          <div class="align-items-center facebook-bg">
+            <i class='bx bxl-facebook'></i>
+          </div>
+          <div class="align-items-center google-bg">
+            <i class='bx bxl-google'></i>
+          </div>
+          <div class="align-items-center twitter-bg">
+            <i class='bx bxl-twitter'></i>
+          </div>
+          <div class="align-items-center instagram-bg">
+            <i class='bx bxl-instagram'></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--END SIGN IN -->
+  </div>
+  <!--END FORM SECTION -->
+  <!-- CONTENT SECTION -->
+  <div class="row_lc content-row">
+    <!-- SIGN IN CONTENT -->
+    <div class="col_lc align-items-center flex-col" >
+      <div class="text sign-in">
+          <h2>
+            Académico CEM
+          </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nemo reiciendis quod accusamus,
+          tempora libero sunt. Quia assumenda suscipit laudantium perferendis provident est adipisci?
+          Quia maiores natus architecto qui repellat!
+        </p>
+      </div>
+      <div class="img sign-in">
+        <img src="assets/img/undraw_back_to_school_inwc.svg" alt="bienvenido">
+      </div>
+    </div>
+
+    <!-- END SIGN IN CONTENT -->
+    <!-- SIGN UP CONTENT -->
+    <div class="col_lc">
+    </div>
+    <!-- END SIGN UP CONTENT -->
+  </div>
+  <!--END CONTENT SECTION -->
+</div>

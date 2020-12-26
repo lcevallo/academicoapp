@@ -1,0 +1,403 @@
+  <div class="card">
+
+      <div class="card-body">
+          <form id="editUserForm">
+              <div class="row">
+                  <div class="col-lg-9">
+                      <fieldset class="border p-2">
+                          <legend class="w-auto">Informacion Personal</legend>
+
+                        <div class="row">
+
+                          <div class="col-md-6">
+                            <div class="form-group mb-0">
+                              <label for="tipo_documento" class="form-control-label">Tipo Documento</label>
+                              <div class="controls">
+                                  <select  class="form-control" id="tipo_documento" required>
+                                      <option value="Select Gender" selected disabled>Selecccione Tipo documento</option>
+                                      <option value="cedula">Cedula</option>
+                                      <option value="pasaporte">Pasaporte</option>
+                                    </select>
+                                  <span  id="_tipodocumentoValidation" class="text-danger"></span>
+                              </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="form-group mb-0">
+                              <label for="identificacion" class="form-control-label">
+                                  No de Identificacion<span>*</span>
+                              </label>
+                              <div class="controls ">
+                                  <input  class="form-control" id="identificacion" required type="text" placeholder="094517.." [value]="" />
+                                  <span id="_identificacionValidation" class="text-danger"></span>
+                              </div>
+                          </div>
+                        </div>
+                        </div>
+
+                          <div class="row">
+                              <div class="col-md-3">
+                                  <div class="form-group mb-0">
+                                      <label for="firstname" class="form-control-label">
+                                          Primer Nombre<span>*</span>
+                                      </label>
+                                      <div class="controls">
+                                          <input  class="form-control" id="firstname" placeholder="eg: Segundo" required type="text" />
+                                          <span  id="_firstnameValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-3">
+                                  <div class="form-group mb-0">
+                                      <label for="middlename" class="form-control-label">
+                                          Segundo Nombre
+                                      </label>
+                                      <div class="controls">
+                                          <input  class="form-control" id="middlename" placeholder="eg: Jose" type="text" />
+                                          <span id="_middlenameValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-3">
+                                  <div class="form-group mb-0">
+                                      <label for="lastname" class="form-control-label">
+                                          Primer Apellido<span>*</span>
+                                      </label>
+                                      <div class="controls">
+                                          <input class="form-control" id="lastname" required type="text" placeholder="eg: Odin" />
+                                          <span  id="_lastnameValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="form-group mb-0">
+                                    <label for="lastname" class="form-control-label">
+                                        Segundo Apellido<span>*</span>
+                                    </label>
+                                    <div class="controls">
+                                        <input class="form-control" id="lastname" required type="text" placeholder="eg: Remache" />
+                                        <span  id="_lastnameValidation" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <div class="form-group mb-0">
+                                      <label for="email" class="form-control-label">
+                                          Email<span>*</span>
+                                      </label>
+                                      <div class="controls">
+                                          <input  class="form-control" id="email" disabled required type="email" />
+                                          <span  id="_emailValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-3">
+                                  <div class="form-group mb-0">
+                                      <label for="username" class="form-control-label">
+                                          Username<span>*</span>
+                                      </label>
+                                      <div class="controls">
+                                          <input  class="form-control" id="username" disabled required type="text" />
+                                          <span  id="_usernameValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-3">
+                                  <div class="form-group mb-0">
+                                      <label for="phone" class="form-control-label">
+                                          Celular<span>*</span>
+                                      </label>
+                                      <div class="controls">
+                                          <input  class="form-control" id="phone" required type="text" placeholder="(123)-456-7890" />
+                                          <span  id="_phoneValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--Birthday-->
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="form-group mb-0">
+                                      <label for="birthdate" class="form-control-label ">Fecha de Nacimiento<span>*</span></label>
+                                      <div class="controls">
+                                          <input  type="text" id="birthdate" class="form-control" placeholder="mm/dd/yyyy">
+                                          <span  id="_birthdayValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <div class="form-group mb-0">
+                                      <label for="gender" class="form-control-label">Gender (optional)</label>
+                                      <div class="controls">
+                                          <select  class="form-control" id="gender" required>
+                                              <option value="Select Gender" selected disabled>Select Gender</option>
+                                              <option value="Male">Male</option>
+                                              <option value="Female">Female</option>
+                                              <option value="Transgender">Transgender</option>
+                                              <option value="Two-Spirit">Two-Spirit</option>
+                                              <option value="Cisgender">Cisgender</option>
+                                              <option value="Non-Binary">Non-Binary</option>
+                                              <option value="Gender Neutral">Gender Neutral</option>
+                                              <option value="Prefer Not To Say">Prefer Not To Say</option>
+                                              <option value="Other">Other</option>
+                                          </select>
+                                          <span  id="_genderValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="form-group mb-0">
+                                      <label for="displayname" class="form-control-label">
+                                          Display Name<span>*</span>
+                                      </label>
+                                      <div class="controls ">
+                                          <input  class="form-control" id="displayname" required type="text" placeholder="General King Koba" [value]="" />
+                                          <span id="_displayNameValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
+                  <div class="col-lg-3">
+                      <fieldset class="border p-3 mt-4">
+                          <div class="col-12">
+                              <div class="form-group mb-0" id="profpic">
+                                  <img src="" id="imgProfile" class="img-thumbnail w-100" alt="" />
+                                  <div class="mt-2">
+                                      <input type="file" onchange="onFileChanged(this)" id="profpicfile" name="profpicfile" />
+                                      <a onclick="triggerInput()" class="btn btn-sm btn-success w-100 text-white">Change Photo</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-lg-6">
+                      <fieldset class="border p-2">
+                          <legend class="w-auto">Informacion de Domicilio</legend>
+                          <input type="text" hidden id="userId" />
+                          <div class="row">
+                              <div class="col-12">
+                                  <div class="form-group mb-0">
+                                      <label for="address1" class="form-control-label">
+                                          Direccion<span>*</span>
+                                      </label>
+                                      <div class="controls ">
+                                          <input class="form-control" id="address1" maxlength="50" type="text" />
+                                          <span  id="_billingAddressLine1Validation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-8">
+                                  <div class="form-group mb-0">
+                                      <label for="address2" class="form-control-label ">Address line 2</label>
+                                      <div class="controls">
+                                          <input class="form-control" id="address2" maxlength="50" type="text" />
+                                          <span  id="_billingAddressLine2Validation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-4">
+                                  <div class="form-group mb-0">
+                                      <label for="unit" class="form-control-label">Suite#</label>
+                                      <div class="controls ">
+                                          <input  class="form-control" id="unit" maxlength="50" type="text" />
+                                          <span  id="_billingAddressUnitValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-12">
+                                  <div class="form-group mb-0">
+                                      <label for="country" class="form-control-label requiredField">Country<span>*</span></label>
+                                      <div class="controls">
+                                          <select  class="form-control form-control-chosen" id="country" required>
+                                          </select>
+                                          <span  id="_billingAddressCountryValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="form-group mb-0">
+                                      <label for="state" class="form-control-label  requiredField">
+                                          State<span>*</span>
+                                      </label>
+                                      <div class="controls">
+                                          <select  class="form-control" id="state">
+                                          </select>
+                                          <span  id="_billingAddressStateValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-8">
+                                  <div class="form-group mb-0">
+                                      <label for="city" class="form-control-label  requiredField">
+                                          City<span>*</span>
+                                      </label>
+                                      <div class="controls">
+                                          <input class="form-control" id="city" maxlength="75" type="text" />
+                                          <span  id="_billingAddressCityValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="form-group mb-0">
+                                      <label for="postalcode" class="form-control-label  requiredField">
+                                          Postal Code<span>*</span>
+                                      </label>
+                                      <div class="controls ">
+                                          <input class="form-control" id="postalcode" type="text" />
+                                          <span id="_billingAddressPostalCodeValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                      <fieldset class="border p-2">
+                          <legend class="w-auto">Shipping Address</legend>
+                          <div class="row">
+                              <div class="col-12">
+                                  <div class="form-group mb-0">
+                                      <label for="saddress1" class="form-control-label  requiredField">
+                                          Address line 1<span>*</span>
+                                      </label>
+                                      <div class="controls ">
+                                          <input class="form-control" id="saddress1" maxlength="50" type="text" />
+                                          <span  id="_shippingAddrLine1Validation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-8">
+                                  <div class="form-group mb-0">
+                                      <label for="saddress2" class="form-control-label ">Address line 2</label>
+                                      <div class="controls ">
+                                          <input class="form-control" id="saddress2" maxlength="50" type="text" />
+                                          <span id="_shippingAddrLine2Validation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-4">
+                                  <div class="form-group mb-0">
+                                      <label for="sunit" class="form-control-label">Suite#</label>
+                                      <div class="controls ">
+                                          <input  class="form-control" id="sunit" maxlength="50" type="text" />
+                                          <span  id="_shippingAddrUnitValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-12">
+                                  <div class="form-group mb-0">
+                                      <label for="scountry" class="form-control-label ">Country<span>*</span></label>
+                                      <div class="controls">
+                                          <select  class="form-control" id="scountry" required>
+                                          </select>
+                                          <span  id="_shippingAddressCountryValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="form-group mb-0">
+                                      <label for="sstate" class="form-control-label">
+                                          State<span>*</span>
+                                      </label>
+                                      <div class="controls">
+                                          <select class="form-control" id="sstate">
+                                              <option value="ProfileDetails.shippingAddress.state" disabled selected></option>
+                                          </select>
+                                          <span id="_shippingAddressStateValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-8">
+                                  <div class="form-group mb-0">
+                                      <label for="scity" class="form-control-label  requiredField">
+                                          City<span>*</span>
+                                      </label>
+                                      <div class="controls">
+                                          <input class="form-control" id="scity" maxlength="75" type="text" />
+                                          <span  id="_shippingAddressCityValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="form-group mb-0">
+                                      <label for="spostalcode" class="form-control-label">
+                                          Postal Code<span>*</span>
+                                      </label>
+                                      <div class="controls">
+                                          <input  class="form-control" id="spostalcode" type="text" />
+                                          <span  id="_shippingAddressPostalCodeValidation" class="text-danger"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
+              </div>
+              <div class="row mt-2">
+                  <div class="col">
+                      <fieldset class="border p-2">
+                          <legend class="w-auto"></legend>
+                          <div class="form-check-inline">
+                              <label>
+                                  <input  type="checkbox" class="form-check-input" id="isTermsAccepted">Terms Accepted
+                              </label>
+                          </div>
+                          <div class="form-check-inline">
+                              <label>
+                                  <input type="checkbox" class="form-check-input" disabled id="isEmailVerified">Email Verified
+                              </label>
+                          </div>
+                          <div class="form-check-inline">
+                              <label>
+                                  <input  type="checkbox" class="form-check-input" id="isTwoFactorOn">Two Factor Auth
+                              </label>
+                          </div>
+                          <div class="form-check-inline">
+                              <label>
+                                  <input  type="checkbox" class="form-check-input" disabled id="isPhoneVerified">Phone Verified
+                              </label>
+                          </div>
+                          <div>
+                              <span  id="_isTermsAcceptedValidation" class="text-danger"></span>
+                          </div>
+                      </fieldset>
+                  </div>
+              </div>
+
+
+              <div class="pt-3">
+                  <div>
+                      <div class="text-center">
+                          <button type="submit" class="btn btn-primary btn-custom-class" id="editUserFormSubmit">Save Changes</button>
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>

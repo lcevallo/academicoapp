@@ -1,0 +1,44 @@
+
+                    #profpicfile {
+                      display: none;
+                  }
+                  .badge.badge-outline.badge-dark {
+                      border-color: #324148;
+                      color: #324148;
+                  }
+                  .badge.badge-outline {
+                      background: transparent;
+                      border: 2px solid;
+                  }
+                  .badge {
+                      font-weight: 500;
+                      border-radius: 4px;
+                      padding: 5px 7px;
+                      font-size: 72%;
+                      letter-spacing: 0.3px;
+                      vertical-align: middle;
+                      display: inline-block;
+                      text-align: center;
+                      text-transform: capitalize;
+                  }
+                  .form-control {
+                      color: #324148;
+                      border-width: 2px;
+                      border-color: #eaecec;
+                      padding: .375rem .75rem;
+                      height: calc(2.25rem + 4px);
+                  }
+                  .chosen-container-single .chosen-single {
+                      height: calc(2.25rem + 4px) !important;
+                      padding: .375rem .75rem !important;
+                      border-radius: 3px !important;
+                      border: 2px solid #eaecec !important;
+                      color: #324148 !important;
+                      font-size: 1rem !important;
+                  }
+                      .chosen-container-single .chosen-single div b {
+                          margin-top: 2px !important;
+                      }
+                  .chosen-container-single .chosen-search, .chosen-container .chosen-results {
+                      font-size: 1rem !important;
+                  }
